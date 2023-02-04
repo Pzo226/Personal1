@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 body {
   margin: 0;
   height: 100vh;
@@ -11,7 +12,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1.3fr;
-  grid-template-rows: 1fr 4fr 3fr 2fr;
+  grid-template-rows: 1fr 4fr 3fr 2fr 2fr;
   height: 100vh;
   margin: 2em;
   gap: 1.1em;
@@ -19,18 +20,99 @@ body {
 
 header {
   grid-area: 1/1/2/4;
-  background-color: lightpink;
+  background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   position: relative;
   margin: 10px;
   border-radius: 40px;
+  color: white;
+}
+
+header img {
+  height: auto;
+  width: 30%;
+  position: relative;
+  margin-right: auto;
+}
+
+td {
+  background-color: beige;
+  font-family: "Patrick Hand";
+  font-size: 38px;
+  letter-spacing: 4.6px;
+  word-spacing: 5.4px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+div.wordsOr {
+  grid-area: 3/1/4/2;
+  background-color: beige;
+  font-family: "Patrick Hand";
+  font-size: 38px;
+  letter-spacing: 4.6px;
+  word-spacing: 5.4px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  text-align: center;
+}
+
+div.wordsWeb {
+  grid-area: 3/2/4/3;
+  background-color: bisque;
+  font-family: "Patrick Hand";
+  font-size: 38px;
+  letter-spacing: 4.6px;
+  word-spacing: 5.4px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  text-align: center;
+}
+
+div.wordsDevelopment {
+  grid-area: 3/3/4/4;
+  background-color: cadetblue;
+  font-family: "Patrick Hand";
+  font-size: 38px;
+  letter-spacing: 4.6px;
+  word-spacing: 5.4px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  text-align: center;
+}
+
+div.candy {
+  grid-area: 4/1/5/3;
+  background-color: #222;
+  text-align: center;
+}
+
+section.tom {
+  grid-area: 5/1/6/4;
+  background-color: rgb(225, 198, 136);
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #666;
+#dropbtn:hover, #dropbtn:focus {
+  background-color: transparent;
 }
 
 .show {
@@ -38,9 +120,9 @@ header {
 }
 
 /* Dropdown Button */
-.dropbtn {
+#dropbtn {
   background-color: transparent;
-  color: black;
+  color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -70,7 +152,7 @@ header {
   background-color: transparent;
 }
 
-button.dropbtn {
+button #dropbtn {
   margin: 5px;
   border: 40px lightcoral;
 }
@@ -84,6 +166,7 @@ button.dropbtn {
 .dropdown-content a:hover .animate__animated.animate__pulse {
   --animation-duration: 6s;
   --animation-delay: 2ms;
+  font-family: "Patrick Hand", cursive;
 }
 
 /* Show the dropdown menu on hover */
@@ -95,8 +178,8 @@ button.dropbtn {
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #666;
+.dropdown:hover #dropbtn {
+  background-color: transparent;
 }
 
 h1 {
@@ -130,7 +213,7 @@ h1:hover span {
 }
 
 article {
-  grid-area: 2/1/3/3;
+  grid-area: 2/1/3/4;
   background-color: transparent;
 }
 
@@ -269,10 +352,85 @@ article {
   border-radius: 2px;
   min-height: 20rem;
   line-height: 160%;
-  background-color: #f9f9f9;
+  --background: rgb(211, 158, 211);
   filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
   background-image: linear-gradient(#e4e4e4 1px, transparent 1px);
   background-size: 8% 8%, 2px 2px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  border: 1px solid #c3c3c3;
+  display: flex;
+}
+
+.mocks {
+  display: block;
+}
+
+main p:nth-of-type(1) {
+  flex-grow: 1;
+}
+
+main ul:nth-of-type(2) {
+  flex-grow: 3;
+}
+
+p {
+  font-family: "Patrick Hand", cursive;
+  position: relative;
+}
+
+#Products {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 1fr;
+}
+
+product {
+  box-sizing: border-box;
+  width: 20%;
+  padding: 1.5em;
+  font-size: 16px;
+}
+
+img {
+  flex-grow: var(--animation-delay);
+}
+
+.animate__animated.animate__repeat-2 {
+  font-family: "Patrick Hand", cursive;
+  font: 400;
+}
+
+.animate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: xxx-large;
+}
+
+.mocks {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+#tots {
+  color: #616161;
+  background: #bababa;
+  text-shadow: #e0e0e0 1px 1px 0;
+  color: #616161;
+  background: #bababa;
 }
 
 .tabs {
@@ -290,6 +448,40 @@ article {
     width: calc(100% - 4rem);
   }
 }
+* {
+  box-sizing: border-box;
+}
+
+.product-list .product {
+  width: 100%;
+  min-width: 320px;
+}
+.product-list .product-image {
+  float: left;
+  margin-right: 20px;
+  height: auto;
+  width: 83px;
+}
+
+.product {
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+.product:hover {
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+.product-span3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  height: auto;
+  max-width: fit-content;
+}
+
 #solid:checked ~ .folder .tab:nth-of-type(1),
 #solid:checked ~ .folder .content__inner:nth-of-type(1) {
   --background: rgb(211, 158, 211);
@@ -410,19 +602,10 @@ input.variation:nth-of-type(1) + label {
   --animation-duration: 2s;
 }
 
-section.nom {
-  grid-area: 3/1/4/2;
-  background-color: beige;
-}
-
-section.yum {
-  grid-area: 3/2/4/3;
-  background-color: bisque;
-}
-
-section.tom {
-  grid-area: 4/1/5/4;
-  background-color: rgb(225, 198, 136);
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 div.site-footer {
@@ -582,19 +765,15 @@ div.site-footer {
     font-weight: 600;
   }
 }
-main {
-  grid-area: 2/3/3/4;
-  background-color: cadetblue;
-}
-
 .spotlight {
   color: #333;
   font-family: Helvetica;
   margin: 0;
   padding: 0;
-  font-size: 8rem;
+  font-size: 5rem;
   letter-spacing: -0.3rem;
   position: relative;
+  margin-right: auto;
 }
 
 .spotlight::after {
