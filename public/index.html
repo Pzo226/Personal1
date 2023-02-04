@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/8095dfc684.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Homepage</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <!-- <h1 class="spotlight" data-spotlight="#stayReady">#stayReady</h1> -->
+            <img src="./images/Logo 500x500 px.png" alt="Logo">
+
+            <div class="dropdown">
+                <button class="animate__animated animate__fadeIn" onclick="myFunction()" id="dropbtn"><i
+                        class="fa-solid fa-bars"></i></button>
+                <button class="animate__animated animate__fadeIn" onclick="myFunction()" id="dropbtn"><i
+                        class="fa-solid fa-cart-shopping"></i></button>
+
+                <div id="myDropdown" class="dropdown-content">
+                    <a class="animate__animated animate__pulse animate__repeat-2" href="#">Pricing Navigation</a>
+                    <a class="animate__animated animate__pulse animate__repeat-2" href="#">Search</a>
+                    <a class="animate__animated animate__pulse animate__repeat-2" href="#">Contact</a>
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+        <article>
+            <input class="variation" id="solid" type="radio" value="1" name="border" checked="checked" />
+            <!-- <label for="solid"><span class="circle"></span><span>Flat UI</span></label> -->
+            <input class="variation" id="shadow" type="radio" value="2" name="border" />
+            <!-- <label for="shadow"> <span class="circle"></span><span>Realistic</span></label> -->
+            <div class="folder">
+                <div class="tabs">
+                    <button class="tab active" onclick="openTab(event, 'tab-1')">Products
+                        <div><span class="animate__animated animate__pulse animate__repeat-2"></span></div>
+                    </button>
+                    <button class="tab" onclick="openTab(event, 'tab-2')">
+                        <div><span class="animate__animated animate__pulse animate__repeat-2">full description
+                            </span></div>
+                    </button>
+                    <button class="tab" onclick="openTab(event, 'tab-3')">
+                        <div><span class="animate__animated animate__pulse animate__repeat-2">shopping cart</span></div>
+                    </button>
+                    <button class="tab" onclick="openTab(event, 'tab-4')">
+                        <div><span class="animate__animated animate__pulse animate__repeat-2">Purchasing
+                                days</span></div>
+                    </button>
+                </div>
+                <div class="content">
+                    <div class="content__inner" id="tab-1">
+                        <div class="page">
+                            <div class="animate"><span
+                                    class="animate__animated animate__pulse animate__repeat-2">hVm3n</span></div>
+
+                            <main>
+                                <!-- <table cellpadding="2" cellspacing="2" border="0" bgcolor="#dfdfdf" width="100%"
+                                    align="center">
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th>Estimated cost</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableData"></tbody>
+                                </table>
+                                <div class="numbers">
+                                    <h1 id="tots">Total</h1>
+                                    <h1 id="total"></h1> -->
+
+                                <!-- <a href="#" id="productGrid">Grid</a>
+                                |
+                                <a href="#" id="productList">List</a> -->
+
+                                <div id="Products" class="product-grid">
+                                    <div class="product">
+                                        
+                                        <div class="product-image">
+                                            <img src="./images/backmockup.png" height="auto" width="200px"
+                                                alt="shirt" />
+                                        </div>
+                                        <h3 class="product-name">
+                                            <a href="#">First commit</a>
+                                        </h3>
+                                        <p class="product-info">
+                                            Solids: 100% Cotton; Sport blue: 90% Cotton, 10% Polyester
+                                            Imported
+                                            Pull On closure
+                                            Machine Wash
+                                            Soft, breathable cotton
+                                            Moisture wicking technology keeps you cool and dry
+                                            Tag-free to prevent irritation
+                                            Classic length for easy tucking
+                                            Durable stitching
+                                            Lay-flat hidden collar
+                                        </p>
+                                        <p class="product-price">
+                                            15,99 €
+                                        </p>
+                                        <button class="btn btn-primary" type="button">add to cart</button>
+                                    </div> 
+                                    <div class="product">
+                                        
+                                        <div class="product-image">
+                                            <img src="./images/backmockup.png" height="auto" width="200px"
+                                                alt="shirt" />
+                                        </div>
+                                        <h3 class="product-name">
+                                            <a href="#">First commit</a>
+                                        </h3>
+                                        <p class="product-info">
+                                            Solids: 100% Cotton; Sport blue: 90% Cotton, 10% Polyester
+                                            Imported
+                                            Pull On closure
+                                            Machine Wash
+                                            Soft, breathable cotton
+                                            Moisture wicking technology keeps you cool and dry
+                                            Tag-free to prevent irritation
+                                            Classic length for easy tucking
+                                            Durable stitching
+                                            Lay-flat hidden collar
+                                        </p>
+                                        <p class="product-price">
+                                            15,99 €
+                                        </p>
+                                        <button class="btn btn-primary" type="button">add to cart</button>
+                                    </div> 
+                                </div>
+                            </main>
+
+                            <a href=""></a>
+                            <p> </p>
+                        </div>
+                    </div>
+                    <div class="content__inner" id="tab-2">
+                        <div class="page">
+                            <p>redirect to full discription on you pick </p>
+                            <p>this is where you see everything on what you clicked on </p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="content__inner" id="tab-3">
+                        <div class="page">
+                            <p>shopping cart </p>
+                            <p>.</p>
+                        </div>
+                    </div>
+                    <div class="content__inner" id="tab-4">
+                        <div class="page">
+                            <p>purchase</p>
+                            <ul>
+
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+        <div class="wordsOr">
+            Or
+        </div>
+        <div class="wordsWeb">
+            Web
+        </div>
+        <div class="wordsDevelopment">
+            Development
+        </div>
+        <section class="tom">
+            <div class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <h6>About</h6>
+                            <p class="text-justify"> <i>HELPING OTHERS</i> </p>
+                        </div>
+
+                        <div class="col-xs-6 col-md-3">
+                            <h6>Categories</h6>
+                            <ul class="footer-links">
+                                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-6 col-md-3">
+                            <h6>Quick Links</h6>
+                            <ul class="footer-links">
+                                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                                <a href="#">Scanfcode</a>.
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <ul class="social-icons">
+                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="twitter" href="https://twitter.com/webdeveloper575"><i
+                                            class="fa fa-twitter"></i></a></li>
+                                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+        </section>
+        <div class="candy">
+            <table cellpadding="2" cellspacing="2" border="0" bgcolor="#dfdfdf" width="100%" align="center">
+                <thead>
+                    <tr>
+                        <th>Estimated cost</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData"></tbody>
+            </table>
+            <div class="numbers">
+                <h1 id="tots">Total</h1>
+                <h1 id="total"></h1>
+
+            </div>
+        </div>
+
+
+
+
+        <script src="./js/index.js"></script>
+</body>
+
+</html>
