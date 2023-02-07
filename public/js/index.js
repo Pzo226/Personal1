@@ -18,6 +18,10 @@ function myFunction() {
     }
   }
   
+ 
+
+
+
   function openTab(evt, tab) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("content__inner");
@@ -86,6 +90,83 @@ k+='</tbody>';
 
 document.getElementById('tableData').innerHTML = k;
 document.getElementById('total').innerHTML = sum;
+
+
+const product = [
+   
+    
+    {
+      id: 0,
+      title: "z Flip ",
+      price: 16.99,
+
+
+    }
+
+];
+const categories = [...new Set(product.map((item)=>
+  {return item}))]
+  let s = 0;
+  document.getElementById('root').innerHTML = categories.map((item)=>
+  {
+    var {image, title, price} = item;
+    return(
+      `<div class='box'>
+
+      </div>
+      <div class='bottom'>
+      <p>${title}</p>
+      <h2>$ ${price}.00</h2>`+
+      "<button onclick='addtocart("+(i++)+")'>Add To Cart</button>"+`</div>
+      </div>`
+
+
+    )
+  }).join('')
+
+  var cart = [];
+
+  function addtocart(a){
+    cart.push({...categories});
+    displaycart();
+
+  }
+
+  function delElement(a){
+    cart.splice(a, 1);
+    displaycart();
+  }
+  
+  function displaycart(a){
+    let j = 0, total=0; 
+    document.getElementById("count").innerHTML=cart.length;
+    if(cart.length==0){
+      document.getElementById('cartItem').innerHTML = "Your cart is ready ";
+      document.getElementById("total").innerHTML= "$ "+0+" .00";
+      
+    }
+    else {
+      document.getElementById("cartItem").innerHTML = cart.map((items)=>
+      {
+        var{image, title, price} = items;
+        total=total+price;
+        document.getElementById("total").innerHTML = "$ "+total+".00";
+        return(
+          `<div class='cart-item'>
+          <div class='row-img'>
+          <img class='rowing' src=${image}>
+          </div
+          <p style='font-siize:12px; '"${title}</p>
+          <h2 style='font-size: 15px; '>$ ${price}.00</h2> +
+          "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"`
+        );
+
+      }).join('')
+      
+    }
+  }
+
+  
 
   
   //Horizontal scroll for the tabs on mousewheel. If tabs are longer than the content section, there's a scroll bar but it's hidden to retain the design.
