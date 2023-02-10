@@ -7,14 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/pr.css">
     <script src="https://kit.fontawesome.com/8095dfc684.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+
+    <!-- HTML Meta Tags -->
+    <title>
+        hVm3n - Main
+    </title>
+    <meta name="description" content="undefined">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://jacorya.com/">
+    <meta property="og:type" content="">
+    <meta property="og:title" content="
+    hVm3n - Main
+ ">
+    <meta property="og:description" content="undefined">
+    <meta property="og:image"
+        content="https://media.licdn.com/dms/image/C5603AQFfPpp5FxX9mQ/profile-displayphoto-shrink_200_200/0/1659685450131?e=1681344000&v=beta&t=DJYyrEN3oUfa0rI-T73T_-kdXTib6cmPUe79BZewYOk">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="jacorya.com">
+    <meta property="twitter:url" content="https://twitter.com/webdeveloper575">
+    <meta name="twitter:title" content="
+    hVm3n - Main
+ ">
+    <meta name="twitter:description" content="undefined">
+    <meta name="twitter:image"
+        content="https://media.licdn.com/dms/image/C5603AQFfPpp5FxX9mQ/profile-displayphoto-shrink_200_200/0/1659685450131?e=1681344000&v=beta&t=DJYyrEN3oUfa0rI-T73T_-kdXTib6cmPUe79BZewYOk">
+
+    <!-- add icon link -->
+    <link rel="icon" href="./images/Logo 500x500 px.png" type="./images/Logo 500x500 px.png">
+
 </head>
 
 <body>
     <div class="landingpage">
         <div class="navbar">
             <a class="navlogo">
-                <img src="./images/Logo 500x500 px.png" height="auto" width="230px" alt="Logo">
+                <img src="./images/Logo 500x500 px.png" height="210px" width="230px" alt="Logo">
             </a>
             <button class="hamburger">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
@@ -29,11 +59,15 @@
                 <span class="navlink">How It Works</span>
             </div>
             <div class="buttonwrap">
-                <button class="createbtn selectedbtn">CREATE</button>
-                <button class="createbtn">SIGN IN</button>
-                <button class="animate__animated animate__fadeIn" onclick="myFunction()" id="count"><i
-                        class="fa-solid fa-cart-shopping"></i></button>
+                <!-- <button class="createbtn selectedbtn">CREATE</button>
+                <button class="createbtn">SIGN IN</button> -->
+                <button class="animate__animated animate__fadeIn" id="count">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div id="cartItem">Your cart is empty</div>
+                </button>
+
             </div>
+
         </div>
         <div class="box">
             <div class="infobox">
@@ -81,46 +115,40 @@
                 <p class="titleslim">View all</p>
             </div>
             <div class="nft">
-                <div class=item>
-                    <img class="item-img" src="./images/backmockup.png" alt="shirt" border="0">
-                    <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
-                    </div>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class=item>
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.31.17 AM.png"
+                <div class="item">
+                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.20.20 AM.png"
                         alt="unsplash-OG44d93i-NJk" border="0">
                     <div class="item-title">
-                        <p>
-                        <div class="container">
-                            <div id="root"></div>
-                            <div id="cartItem">Your cart is empty</div>
-
-
-                        </div>
-                        </p>
-                        <p>1.20 Weth</p>
+                        <button class="add-to-cart-button">Add to Cart</button>
                     </div>
+                    <p class="item-price" >1.20 Weth</p>
                     <p class="item-date">Ends in 01.34.45</p>
                 </div>
-                <div class=item>
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.20.35 AM.png" border="0">
-                    <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
-                    </div>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class=item>
-                    <img class="item-img"
-                        src="https://i.ibb.co/VLfJ41h/MR-ROBOT-two-cyberpunk-cowboys-dueling-6ae4203d-3539-4033-a9d9-80d747ac6498.png"
+                <div class="item">
+                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.20.35 AM.png"
                         alt="unsplash-OG44d93i-NJk" border="0">
                     <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
+                        <button class="add-to-cart-button">Add to Cart</button>
                     </div>
+                    <p class="item-price" >1.20 Weth</p>
+                    <p class="item-date">Ends in 01.34.45</p>
+                </div>
+                <div class="item">
+                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.26.15 AM.png"
+                        alt="unsplash-OG44d93i-NJk" border="0">
+                    <div class="item-title">
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                    <p class="item-price">1.20 Weth</p>
+                    <p class="item-date">Ends in 01.34.45</p>
+                </div>
+                <div class="item">
+                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.26.42 AM.png"
+                        alt="unsplash-OG44d93i-NJk" border="0">
+                    <div class="item-title">
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                    <p class="item-price">1.20 Weth</p>
                     <p class="item-date">Ends in 01.34.45</p>
                 </div>
             </div>
@@ -167,7 +195,7 @@
                 </div>
                 <div class="itemwrapper">
                     <div class="started-items-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="px" viewBox="0 0 36 31">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="auto" viewBox="0 0 36 31">
                             <path style="stroke:none;fill-rule:evenodd;fill:#bdbdbd;fill-opacity:1"
                                 d="M2.832 2.9219c-.2148 0-.3867.1758-.3867.3906v24.375c0 .2148.1719.3906.3867.3906h4.9453l13.332-14.1875c1.0548-1.121 2.8165-1.1445 3.8985-.0508l8.5469 8.6407V3.3125c0-.2148-.1719-.3906-.3867-.3906Zm30.336 27.5156H2.832c-1.5039 0-2.7226-1.2305-2.7226-2.75V3.3125c0-1.5195 1.2187-2.75 2.7226-2.75h30.336c1.5039 0 2.7226 1.2305 2.7226 2.75v24.375c0 1.5195-1.2187 2.75-2.7226 2.75ZM22.8008 15.5156 10.996 28.0781H33.168c.2148 0 .3867-.1758.3867-.3906v-1.871L23.3594 15.5077a.388.388 0 0 0-.5586.0078Zm-9.4688-4.3398c0 1.5195-1.2187 2.75-2.7226 2.75-1.5 0-2.7188-1.2305-2.7188-2.75 0-1.5196 1.2188-2.75 2.7188-2.75 1.5039 0 2.7226 1.2304 2.7226 2.75Zm2.336 0c0 2.8242-2.2657 5.1094-5.0586 5.1094-2.789 0-5.0547-2.2852-5.0547-5.1094s2.2656-5.1094 5.0547-5.1094c2.793 0 5.0586 2.2852 5.0586 5.1094Zm0 0" />
                         </svg>
@@ -226,82 +254,75 @@
                 </div>
             </div>
             <div class="discover-items">
-                <div class=item>
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.20.20 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
-                    </div>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class=item>
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.26.42 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
-                    </div>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class=item>
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.26.15 AM.png" border="0">
-                    <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
-                    </div>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class=item>
+                <div class="item">
                     <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.30.24 AM.png"
                         alt="unsplash-OG44d93i-NJk" border="0">
                     <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
+                        <button class="add-to-cart-button">Add to Cart</button>
                     </div>
+                    <p class="item-price">1.20 Weth</p>
                     <p class="item-date">Ends in 01.34.45</p>
                 </div>
-                <div class=item>
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.35.45 AM.png"
+                <div class="item">
+                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.31.17 AM.png"
                         alt="unsplash-OG44d93i-NJk" border="0">
                     <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
+                        <button class="add-to-cart-button">Add to Cart</button>
                     </div>
+                    <p class="item-price">1.20 Weth</p>
                     <p class="item-date">Ends in 01.34.45</p>
                 </div>
-                <div class=item>
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.35.21 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <p>
-                        <div class="container">
-                            <div id="root"></div>
-                            <div id="cartItem">Your cart is empty</div>
-
-                            <button class="btn btn-primary" type="button">add to cart</button>
-                        </div>
-                        </p>
-                        <p>1.20 Weth</p>
-                    </div>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class=item>
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.30.24 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
-                    </div>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class=item>
+                <div class="item">
                     <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.34.45 AM.png"
                         alt="unsplash-OG44d93i-NJk" border="0">
                     <div class="item-title">
-                        <p>Lorem Ipsum</p>
-                        <p>1.20 Weth</p>
+                        <button class="add-to-cart-button">Add to Cart</button>
                     </div>
+                    <p class="item-price">1.20 Weth</p>
+                    <p class="item-date">Ends in 01.34.45</p>
+                </div>
+                <div class="item">
+                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.34.55 AM.png"
+                        alt="unsplash-OG44d93i-NJk" border="0">
+                    <div class="item-title">
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                    <p class="item-price">1.20 Weth</p>
+                    <p class="item-date">Ends in 01.34.45</p>
+                </div>
+                <div class="item">
+                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.35.21 AM.png"
+                        alt="unsplash-OG44d93i-NJk" border="0">
+                    <div class="item-title">
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                    <p class="item-price">1.20 Weth</p>
+                    <p class="item-date">Ends in 01.34.45</p>
+                </div>
+                <div class="item">
+                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.35.45 AM.png"
+                        alt="unsplash-OG44d93i-NJk" border="0">
+                    <div class="item-title">
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                    <p class="item-price">1.20 Weth</p>
+                    <p class="item-date">Ends in 01.34.45</p>
+                </div>
+
+                <div class="item">
+                    <img class="item-img" src="./images/backmockup.png" alt="unsplash-OG44d93i-NJk" border="0">
+                    <div class="item-title">
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                    <p class="item-price">1.20 Weth</p>
+                    <p class="item-date">Ends in 01.34.45</p>
+                </div>
+                <div class="item">
+                    <img class="item-img" src="./images/shirt Mck.png" alt="unsplash-OG44d93i-NJk" border="0">
+                    <div class="item-title">
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                    <p class="item-price">1.20 Weth</p>
                     <p class="item-date">Ends in 01.34.45</p>
                 </div>
             </div>

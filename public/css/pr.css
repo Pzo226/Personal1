@@ -41,8 +41,39 @@ th {
   text-transform: none;
 }
 
+#total {
+  background-color: beige;
+  font-family: "Patrick Hand";
+  font-size: 38px;
+  letter-spacing: 4.6px;
+  word-spacing: 5.4px;
+  color: #8a56dc;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+.container {
+  display: block;
+}
+
 .numbers {
   display: flex;
+  justify-content: space-between;
+}
+
+#count {
+  cursor: pointer;
+}
+
+#count:hover {
+  background-color: lightgray;
+}
+
+#count.clicked {
+  background-color: gray;
 }
 
 .hidden {
@@ -591,7 +622,7 @@ th {
     max-width: 1200px;
   }
 }
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1053px) {
   .box {
     flex-direction: column;
   }
