@@ -72,8 +72,7 @@ toggle between hiding and showing the dropdown content */
     <table style="width:100%">
       <thead>
         <tr>
-          <th>ID & Name</th>
-          <th>Price</th>
+         
         </tr>
       </thead>
       <tbody>
@@ -84,6 +83,15 @@ toggle between hiding and showing the dropdown content */
           </tr>
         `).join('')}
       </tbody>
+      <thead>
+        <tr>
+         <th> <div class="numbers">
+         <h1 id="tots">Total</h1>
+         <h1 id="total"></h1> </div></th>
+        </tr>
+      </thead>
+
+
     </table>
   `;
   
@@ -206,29 +214,166 @@ toggle between hiding and showing the dropdown content */
   
 //   document.getElementsByClassName("candy").innerHTML = myDate;
 
-  let cart = [];
+//   let cart = [];
 
-function addToCart() {
-  const item = this.closest('.item');
-  const price = item.querySelector('.item-price').textContent;
-  cart.push(price);
-  document.querySelector('#cartItem').textContent = `${cart.length} item(s) - $${cart.reduce((total, current) => total + parseFloat(current), 0)}`;
+// function addToCart() {
+//   const item = this.closest('.item');
+//   const price = item.querySelector('.item-price').textContent;
+//   cart.push(price);
+//   document.querySelector('#cartItem').textContent = `${cart.length} item(s) - $${cart.reduce((total, current) => total + parseFloat(current), 0)}`;
+// }
+
+// document.querySelectorAll('.add-to-cart-button').forEach(button => {
+//   button.addEventListener('click', addToCart);
+// });
+
+// const cartButton = document.querySelector('#count');
+// cartButton.addEventListener('click', () => {
+//   const dropdown = document.querySelector('#cartDropdown');
+//   if (dropdown.style.display === 'block') {
+//     dropdown.style.display = 'none';
+//   } else {
+//     dropdown.style.display = 'block';
+//   }
+// });
+
+
+const products = [
+  {
+    id: 1,
+    name: 'T-Shirt 1',
+    price: 20,
+    description: ['Limited edition collectable', '100% cotton', 'Unisex sizing'],
+    image: 'tshirt1.jpg'
+  },
+  {
+    id: 2,
+    name: 'T-Shirt 2',
+    price: 25,
+    description: ['Limited edition collectable', '100% cotton', 'Unisex sizing'],
+    image: 'tshirt2.jpg'
+  },
+  {
+    id: 3,
+    name: 'T-Shirt 3',
+    price: 30,
+    description: ['Limited edition collectable', '100% cotton', 'Unisex sizing'],
+    image: 'tshirt3.jpg'
+  },
+  {
+    id: 4,
+    name: 'T-Shirt 4',
+    price: 35,
+    description: ['Limited edition collectable', '100% cotton', 'Unisex sizing'],
+    image: 'tshirt4.jpg'
+  }
+];
+
+const productsDiv = document.getElementById('products');
+const cartItems = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+let cart = [];
+
+function createProductElement(product, hoverColor) {
+  const productDiv = document.createElement('div');
+  productDiv.classList.add('product');
+  const productImg = document.createElement('img');
+  productImg.classList.add('item-img');
+  const productName = document.createElement('p');
+  productName.classList.add('item-date')
+  const productPrice = document.createElement('p');
+  productPrice.classList.add('item-price')
+  const productDescription = document.createElement('ul');
+  const addToCartBtn = document.createElement('button');
+  addToCartBtn.classList.add('button1');
+  addToCartBtn.document.getElementByClassName('button1');
+
+
+  productImg.src = `images/${product.image}`;
+  productName.innerText = product.name;
+  productPrice.innerText = `$${product.price}`;
+  product.description.forEach(detail => {
+    const detailItem = document.createElement('li');
+    detailItem.innerText = detail;
+    productDescription.appendChild(detailItem);
+  });
+  addToCartBtn.innerText = 'Add to cart';
+  addToCartBtn.addEventListener('mouseenter',  () => {
+    cart.push(product);
+    updateCart();
+  });
+
+  const colors = ['#FF5733', '#8A2BE2', '#1E90FF', '#7CFC00', '#FF1493', '#FFD700'];
+
+addToCartBtn.addEventListener('mouseover', () => {
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  const randomColor = colors[randomIndex];
+  addToCartBtn.style.backgroundColor = randomColor;
+  cart.push(product);
+  updateCart();
+});
+
+
+  addToCartBtn.addEventListener('mouseenter', () => {
+    addToCartBtn.style.backgroundColor = randomColor;
+  });
+  
+  addToCartBtn.addEventListener('mouseleave', () => {
+    addToCartBtn.style.backgroundColor = '';
+  });
+
+  productDiv.appendChild(productImg);
+  productDiv.appendChild(productName);
+  productDiv.appendChild(productPrice);
+  productDiv.appendChild(productDescription);
+  productDiv.appendChild(addToCartBtn);
+
+  return productDiv;
 }
 
-document.querySelectorAll('.add-to-cart-button').forEach(button => {
-  button.addEventListener('click', addToCart);
-});
+function renderProducts() {
+  products.forEach(product => {
+    const productDiv = createProductElement(product, 'orange');
+    productsDiv.appendChild(productDiv);
+  });
+}
 
-const cartButton = document.querySelector('#count');
-cartButton.addEventListener('click', () => {
-  const dropdown = document.querySelector('#cartDropdown');
-  if (dropdown.style.display === 'block') {
-    dropdown.style.display = 'none';
-  } else {
-    dropdown.style.display = 'block';
+
+
+function updateCart() {
+  cartItems.innerText = `${cart.length} item(s)`;
+  const total = cart.reduce((acc, product) => acc + product.price, 0);
+  cartTotal.innerText = `$${total}`;
+}
+
+renderProducts();
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
   }
-});
-  
+  return color;
+}
+
+var buttons = document.querySelectorAll('.button1');
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('mouseover', function() {
+    this.style.backgroundColor = getRandomColor();
+  });
+  buttons[i].addEventListener('mouseout', function() {
+    this.style.backgroundColor = '#4CAF50'; // set default background color on mouseout
+  });
+}
+
+
+
+
+
+
+
+
 
   
 

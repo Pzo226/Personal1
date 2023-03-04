@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/pr.css">
     <script src="https://kit.fontawesome.com/8095dfc684.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8095dfc684.js" crossorigin="anonymous"></script>
 
     <!-- HTML Meta Tags -->
     <title>
-     Introduction to Jacory
+        Introduction to Jacory
     </title>
     <meta name="description" content="undefined">
 
@@ -36,7 +37,7 @@
         content="https://media.licdn.com/dms/image/C5603AQFfPpp5FxX9mQ/profile-displayphoto-shrink_200_200/0/1659685450131?e=1681344000&v=beta&t=DJYyrEN3oUfa0rI-T73T_-kdXTib6cmPUe79BZewYOk">
 
     <!-- add icon link -->
-    <link rel="icon" href="./images/Logo 500x500 px.png" type="./images/Logo 500x500 px.png">
+    <link rel="icon" href="./public/images/Logo 500x500 px.png" type="./images/Logo 500x500 px.png">
 
 </head>
 
@@ -44,14 +45,14 @@
     <div class="landingpage">
         <div class="navbar">
             <a class="navlogo">
-                <img src="./images/Logo 500x500 px.png" height="210px" width="230px" alt="Logo">
+                <img src="./public/images/Logo 500x500 px.png" height="150px" width="auto" alt="Logo">
             </a>
             <button class="hamburger">
                 <i class="fa-brands fa-slack"></i>
             </button>
             <div class="navlinkwrap">
-                <span class="navlink selectedlink">Home</span>
-                <span class="navlink">Contact</span>
+                <span class="navlink selectedlink"></span>
+                <span class="navlink"><a href="./contact.html">Contact</a></span>
                 <span class="navlink">Activity</span>
                 <span class="navlink">How It Works</span>
             </div>
@@ -60,7 +61,10 @@
                 <button class="createbtn">SIGN IN</button> -->
                 <button class="animate__animated animate__fadeIn" id="count">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <div id="cartItem">Your cart is empty</div>
+                    <div id="cart">
+                        <span id="cart-items">0 items</span>
+                        <span id="cart-total">$0</span>
+                    </div>
                 </button>
 
             </div>
@@ -68,19 +72,30 @@
         </div>
         <div class="box">
             <div class="infobox">
-                <p class="infobox-boldtext">
-                    Web Development How you want!
-                </p>
-                <p class="infobox-slimtext">
+                <div class="infobox-boldtext">
+                    Web Development</div>
 
-                </p>
-                <div class="infobox-btnwrapper">
-                    <button class="infobox-explorebtn selected"><a href="./contact.html"></a></button>
-                    <button class="infobox-createbtn">Explore</button>
-                </div>
+            </div>
+
+            <div class="infobox-btnwrapper">
+                <button class="button1"><a href="./contact.html"></a></button>
+                <button class="createbtn">Explore</button>
+            </div>
+            <div class="candy">
+                <table cellpadding="2" cellspacing="2" border="0" bgcolor="#dfdfdf" width="100%" align="center">
+                    <thead>
+                        <tr>
+                            <th>Get an Estimate</th>
+                    <tbody id="tableData"></tbody>
+                    </tr>
+                    </thead>
+                </table>
+
+
+
             </div>
             <div class="display">
-                <img class="display-nft" src="./images/linkedphoto.jpg" alt="shirt" border="0">
+                <img class="display-nft" src="./public/images/linkedphoto.jpg" alt="shirt" border="0">
                 <div class="infowrapper">
                     <div class="info">
                         <i class="fa-brands fa-github fa-3x"></i>
@@ -99,56 +114,24 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="auction">
             <div class="title">
-                <p class="titlebold">
-                <h1 class="spotlight" title="Merch" translate="Merch">Merch</h1>
-                </p>
-                <p class="titleslim">View all</p>
+                <div>
+                    <p class="titlebold">
+                        <h1 class="spotlight" title="Merch" translate="Merch">Merch</h1>
+                    </p>
+                    <p class="titleslim">View all</p>
+                </div>
             </div>
-            <div class="nft">
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.20.20 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price" >25.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.20.35 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price" >26.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.26.15 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">25.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.26.42 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">25.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
+            <div id="products">
+
             </div>
         </div>
         <div class="started">
             <p class="started-boldtext">Getting started</p>
-            <table cellpadding="2" cellspacing="2" border="0" bgcolor="#dfdfdf" width="100%" align="center">
+            <!-- <table cellpadding="2" cellspacing="2" border="0" bgcolor="#dfdfdf" width="100%" align="center">
                 <thead>
                     <tr>
                         <th>Estimated cost</th>
@@ -159,30 +142,30 @@
             <div class="numbers">
                 <h1 id="tots">Total</h1>
                 <h1 id="total"></h1>
-            </div>
+            </div> -->
             <p class="started-slimtext">Eu, molestie commodo, enim pellentesque turpis integer sagittis</p>
             <div class="started-items">
                 <div class="itemwrapper">
                     <div class="started-items-item">
-                        <i class="fa-brands fa-slack"></i>
+                        <i class="fa-brands fa-github"></i>
                     </div>
                     <p>Connect your wallet</p>
                 </div>
                 <div class="itemwrapper">
                     <div class="started-items-item">
-                        <i class="fa-brands fa-slack"></i>
+                        <i class="fa-brands fa-instagram"></i>
                     </div>
                     <p>Posuere urna, sit amet molestie leo</p>
                 </div>
                 <div class="itemwrapper">
                     <div class="started-items-item">
-                        <i class="fa-brands fa-slack"></i>
+                        <i class="fa-brands fa-linkedin"></i>
                     </div>
                     <p>Semper pretium libero sed quam ac integer ut</p>
                 </div>
                 <div class="itemwrapper">
                     <div class="started-items-item">
-                        <i class="fa-brands fa-slack"></i>
+                        <i class="fa-brands fa-twitter"></i>
                     </div>
                     <p>Lectus volutpat magna vitae in arcu</p>
                 </div>
@@ -210,79 +193,7 @@
                     </button>
                 </div>
             </div>
-            <div class="discover-items">
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.30.24 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">25.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 5.31.17 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">26.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.34.45 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">26.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.34.55 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">25.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.35.21 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">34.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/Screen Shot 2023-02-07 at 6.35.45 AM.png"
-                        alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">25.20 </p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
 
-                <div class="item">
-                    <img class="item-img" src="./images/backmockup.png" alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">24.20</p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-                <div class="item">
-                    <img class="item-img" src="./images/shirt Mck.png" alt="unsplash-OG44d93i-NJk" border="0">
-                    <div class="item-title">
-                        <button class="add-to-cart-button">Add to Cart</button>
-                    </div>
-                    <p class="item-price">25.20</p>
-                    <p class="item-date">Ends in 01.34.45</p>
-                </div>
-            </div>
             <button class="discover-loadbtn">LOAD MORE</button>
         </div>
         <div class="footer">
@@ -317,7 +228,7 @@
             <p></p>
         </div>
     </div>
-    <script src="./js/index.js"></script>
+    <script src="./public/js/index.js"></script>
 </body>
 
 </html>
