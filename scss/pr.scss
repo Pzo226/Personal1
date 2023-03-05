@@ -891,8 +891,8 @@ body {
   }
   
   @media screen and (max-width: 480px) {
-    .landingpage{
-      .box {
+    .landingpage{ 
+      .box { display: flex;
         .infobox {
           &-boldtext {
             font-size: 32px;
@@ -908,7 +908,26 @@ body {
         }
       }
     }
+
+    .candy {
+      
+      table {
+
+        display: block;
+        justify-content: center;
+
+        thead {
+          display: flex;
+          justify-content: baseline;
+          align-items: center;
+          
+        }
+      }
+    }
   }
+
+  
+ 
   
   @keyframes leftslide {
     from {transform: translateX(-700px);}
