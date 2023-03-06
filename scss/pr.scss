@@ -1112,6 +1112,72 @@ body {
   }
 }
 
+@media screen and (max-width: 1054px) {
+  .landingpage {
+
+    .navbar {
+     
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+    }
+
+
+    .box {
+      display: flex;
+
+      .infobox {
+        &-boldtext {
+          font-size: 42px;
+          line-height: 1.4em;
+          text-align: center;
+          display: contents;
+          height: auto;
+          width: auto;
+
+          a {
+            font-size: 32px;
+          line-height: 1.4em;
+          text-align: center;
+          display: contents;
+          height: auto;
+          width: auto;
+          }
+        }
+
+        &-slimtext {
+          text-align: center;
+        }
+
+        &-btnwrapper {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .candy {
+
+    
+
+    table {
+
+      display: block;
+      justify-content: center;
+      height: 600px;
+      display: none;
+
+      thead {
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+
+      }
+    }
+  }
+}
+
 
 
 
